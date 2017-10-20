@@ -624,7 +624,9 @@ namespace MathNet.Numerics
         /// <exception cref="ArgumentOutOfRangeException">
         ///     Thrown if <paramref name="b"/> is <c>double.NaN</c>.
         /// </exception>
+#if !NETSTANDARD2_0
         [CLSCompliant(false)]
+#endif
         public static ulong NumbersBetween(this double a, double b)
         {
             if (double.IsNaN(a) || double.IsInfinity(a))

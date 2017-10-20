@@ -311,7 +311,9 @@ namespace MathNet.Numerics.Random
         /// Fills an array with random numbers greater than or equal to 0.0 and less than 1.0.
         /// </summary>
         /// <remarks>Supports being called in parallel from multiple threads.</remarks>
+#if !NETSTANDARD2_0
         [CLSCompliant(false)]
+#endif
         public static void Doubles(double[] values, int seed, ulong a = ASeed, ulong c = CSeed, ulong x1 = YSeed, ulong x2 = ZSeed)
         {
             if (a <= c)
@@ -341,7 +343,10 @@ namespace MathNet.Numerics.Random
         /// Returns an array of random numbers greater than or equal to 0.0 and less than 1.0.
         /// </summary>
         /// <remarks>Supports being called in parallel from multiple threads.</remarks>
+#if !NETSTANDARD2_0
         [CLSCompliant(false)]
+#endif
+
         [TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]
         public static double[] Doubles(int length, int seed, ulong a = ASeed, ulong c = CSeed, ulong x1 = YSeed, ulong x2 = ZSeed)
         {
@@ -354,7 +359,9 @@ namespace MathNet.Numerics.Random
         /// Returns an infinite sequence of random numbers greater than or equal to 0.0 and less than 1.0.
         /// </summary>
         /// <remarks>Supports being called in parallel from multiple threads, but the result must be enumerated from a single thread each.</remarks>
+#if !NETSTANDARD2_0
         [CLSCompliant(false)]
+#endif
         public static IEnumerable<double> DoubleSequence(int seed, ulong a = ASeed, ulong c = CSeed, ulong x1 = YSeed, ulong x2 = ZSeed)
         {
             if (a <= c)

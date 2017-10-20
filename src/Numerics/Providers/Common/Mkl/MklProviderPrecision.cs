@@ -50,14 +50,18 @@ namespace MathNet.Numerics.Providers.Common.Mkl
         AVX2 = 10
     }
 
-    [CLSCompliant(false)]
+#if !NETSTANDARD2_0
+        [CLSCompliant(false)]
+#endif
     public enum MklAccuracy : uint
     {
         Low = 0x1,
         High = 0x2
     }
 
-    [CLSCompliant(false)]
+#if !NETSTANDARD2_0
+        [CLSCompliant(false)]
+#endif
     public enum MklPrecision : uint
     {
         Single = 0x10,

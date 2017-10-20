@@ -1160,7 +1160,9 @@ namespace MathNet.Numerics
         /// </summary>
         /// <param name="value">The signed byte value to convert.</param>
         /// <returns>The result of the conversion.</returns>
+#if !NETSTANDARD2_0
         [CLSCompliant(false)]
+#endif
         public static implicit operator Complex32(sbyte value)
         {
             return new Complex32(value, 0.0f);
@@ -1171,7 +1173,9 @@ namespace MathNet.Numerics
         /// </summary>
         /// <param name="value">The unsgined short value to convert.</param>
         /// <returns>The result of the conversion.</returns>
+#if !NETSTANDARD2_0
         [CLSCompliant(false)]
+#endif
         public static implicit operator Complex32(ushort value)
         {
             return new Complex32(value, 0.0f);
@@ -1214,7 +1218,9 @@ namespace MathNet.Numerics
         /// </summary>
         /// <param name="value">The uint value to convert.</param>
         /// <returns>The result of the conversion.</returns>
+#if !NETSTANDARD2_0
         [CLSCompliant(false)]
+#endif
         public static implicit operator Complex32(uint value)
         {
             return new Complex32(value, 0.0f);
@@ -1225,7 +1231,9 @@ namespace MathNet.Numerics
         /// </summary>
         /// <param name="value">The ulong value to convert.</param>
         /// <returns>The result of the conversion.</returns>
+#if !NETSTANDARD2_0
         [CLSCompliant(false)]
+#endif
         public static implicit operator Complex32(ulong value)
         {
             return new Complex32(value, 0.0f);
